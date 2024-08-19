@@ -23,18 +23,21 @@ class navMenuInterface {
     this.toggle.addEventListener('click', () => this.toggleAction())
     }
 
+    // Menu opening state
     openAction() {
       this.isOpened = true;
       this.container.classList.add('menu-open')
       this.toggle.setAttribute('aria-expanded', this.isOpened)
     }
 
+    // Menu closing state
     closeAction() {
       this.isOpened = false;
       this.container.classList.remove('menu-open')
       this.toggle.setAttribute('aria-expanded', this.isOpened)
     }
 
+    // Toggle between opening and closing state
     toggleAction() {
       if(this.isOpened) {
         this.closeAction()
